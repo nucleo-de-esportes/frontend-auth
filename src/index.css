@@ -8,7 +8,7 @@
   --color-background: #e4e4e4;
 }
 
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -24,4 +24,4 @@ body {
 
 #root {
   min-height: 100vh;
-}
+} */
