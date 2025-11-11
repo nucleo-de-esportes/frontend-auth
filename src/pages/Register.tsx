@@ -7,7 +7,6 @@ import Button from "../components/Button";
 import Form from "../components/Form";
 import TextInput from "../components/TextInput";
 import MainContainer from "../components/MainContainer";
-import { Link } from "react-router-dom";
 
 const emailValidationSchema = z.string().email("Formato de E-mail inválido");
 const nameValidationSchema = z.string().min(1, "Nome obrigatório");

@@ -8,7 +8,6 @@ import Form from "../components/Form";
 import MainContainer from "../components/MainContainer";
 import TextInput from "../components/TextInput";
 import { type AuthTokenPayload } from "../types/AuthTokenPayload";
-import { Link } from "react-router-dom";
 
 const emailValidationSchema = z.string().email("Formato de E-mail inválido");
 const passwordValidationSchema = z.string().min(1, "Senha obrigatória");
