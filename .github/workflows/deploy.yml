@@ -35,4 +35,4 @@ jobs:
           OCI_CLI_KEY_CONTENT: ${{ secrets.OCI_API_PRIVATE_KEY }}
           OCI_CLI_REGION: ${{ secrets.OCI_REGION }}
         with:
-          command: "oci os object bulk-upload --bucket-name ${{ secrets.OCI_BUCKET_NAME_AUTH }} --namespace ${{ secrets.OCI_NAMESPACE }} --src-dir ./dist --overwrite"
+          command: "oci os object bulk-upload --bucket-name ${{ secrets.OCI_BUCKET_NAME }} --namespace ${{ secrets.OCI_NAMESPACE }} --src-dir ./dist --overwrite"
