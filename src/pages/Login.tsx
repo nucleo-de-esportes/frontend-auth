@@ -146,7 +146,7 @@ const Login = () => {
         />
 
         <a
-          href="/auth/register"
+          href="/register"
           className="text-[#BF0087] underline hover:text-[#43054E] transition"
         >
           Criar uma conta

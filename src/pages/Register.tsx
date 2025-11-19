@@ -148,7 +148,7 @@ const Register = () => {
           />
 
           <a
-            href="/auth/login"
+            href="/login"
             className="text-[#BF0087] underline hover:text-[#43054E] transition"
           >
             Fazer Login
