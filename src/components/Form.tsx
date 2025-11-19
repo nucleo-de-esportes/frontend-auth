@@ -1,4 +1,4 @@
-import { FormEvent, ReactNode } from "react";
+import { type FormEvent, type ReactNode } from "react";
 import Title from "./Title";
 
 interface FormProps {
