@@ -8,7 +8,7 @@ import "./services/axiosConfig";
 
 function App() {
   return (
-    <BrowserRouter basename="/auth">
+    <BrowserRouter>
       <AlertProvider>
         <AuthProvider>
           <AlertContainer />
