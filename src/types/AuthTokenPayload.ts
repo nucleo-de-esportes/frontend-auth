@@ -1,11 +1,13 @@
 export interface AuthTokenPayload {
-  sub: string;           // User ID
-  email: string;
-  exp: number;          // Expiration timestamp
-  iat: number;          // Issued at timestamp
-  aud: string;
-  role: string;
-  user_metadata: {
+  sub?: string;           // User ID (formato antigo)
+  subject?: string;       // User ID (formato novo)
+  email?: string;
+  exp: number;            // Expiration timestamp
+  iat?: number;           // Issued at timestamp
+  aud?: string;
+  role?: string;
+  user_type?: "aluno" | "professor" | "admin"; // Formato novo (direto no payload)
+  user_metadata?: {       // Formato antigo (nested)
     email: string;
     email_verified: boolean;
     nome: string;

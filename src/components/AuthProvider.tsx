@@ -18,10 +18,10 @@ export function AuthProvider({ children }: AuthProviderProps) {
       const decodedToken = jwtDecode<AuthTokenPayload>(token);
 
       const userData: User = {
-        user_id: decodedToken.sub,
-        email: decodedToken.email,
-        name: decodedToken.user_metadata.nome,
-        user_type: decodedToken.user_metadata.user_type,
+        user_id: decodedToken.sub || decodedToken.subject || "",
+        email: decodedToken.email || decodedToken.user_metadata?.email || "",
+        name: decodedToken.user_metadata?.nome || "",
+        user_type: decodedToken.user_type || decodedToken.user_metadata?.user_type || "aluno",
         token,
       };
 
@@ -47,10 +47,10 @@ export function AuthProvider({ children }: AuthProviderProps) {
 
         if (decodedToken.exp > currentTime) {
           const userData: User = {
-            user_id: decodedToken.sub,
-            email: decodedToken.email,
-            name: decodedToken.user_metadata.nome,
-            user_type: decodedToken.user_metadata.user_type,
+            user_id: decodedToken.sub || decodedToken.subject || "",
+            email: decodedToken.email || decodedToken.user_metadata?.email || "",
+            name: decodedToken.user_metadata?.nome || "",
+            user_type: decodedToken.user_type || decodedToken.user_metadata?.user_type || "aluno",
             token,
           };
           setUser(userData);

@@ -59,7 +59,8 @@ const Login = () => {
 
       // Decodifica o token para obter o user_type
       const decoded = jwtDecode<AuthTokenPayload>(token);
-      const userType = decoded.user_metadata.user_type;
+      // Suporta ambos os formatos: novo (user_type direto) e antigo (user_metadata.user_type)
+      const userType = decoded.user_type || decoded.user_metadata?.user_type;
 
       showAlert(
         "success",
