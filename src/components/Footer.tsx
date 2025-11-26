@@ -1,4 +1,4 @@
-import logoTeste from "/logo-teste.png";
+import logoCeub from "/logo-ceub.png";
 
 const Footer = () => {
   return (
@@ -9,7 +9,7 @@ const Footer = () => {
         </span>
         <div className="w-max flex flex-col items-end">
           <img
-            src={logoTeste}
+            src={logoCeub}
             alt="CEUB Logo"
             className="h-12 object-contain transform"
           />
